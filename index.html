@@ -103,41 +103,57 @@
         <div class="letter-label">dear Swarna, my Bubu ♡</div>
         <div class="letter-text" id="letterText">Happy birthday, my Bubu. ♡
 
-I wish I could wrap all the love I have for you into one little gift, but even this whole page feels too small for that.
+I wished that ami amar shob valobasha ekta gift e bedhe tmk dite pari, but ei pura website tao shetar jnno choto hoiye jabe.
 
-I hope this new year of your life brings you gentle mornings, reasons to laugh until your cheeks hurt, dreams that come closer, and the kind of happiness that stays even after the special day is over.
+Ei 6 bochore onek ups and downs gese amader rltn e, onk kichui face krsi amra, especially tmi, onk sacrifice krsoo ei relation er jnno, tmi amr life e na thakle amr ki hoto I really dont know, tmr krne amar life e ekta purpose ache, goals achee, tmr krne ami manush hoisiii literally, r still ekhno onk kichu shikhtisi tmr theke...
+
+I dont know prithibite kew perfect hoi kina kinba kew shobkichu pai kina but ami eta janii je tmii amar jnno perfecttt and tmk pawatai amar life e shobkichu pawar shoman, nothing will give me more happiness than being with youuu, I really love youuuuu
+
+22 years old,,, amra boro hoiye gesi onk, ekhn dayittobodh aste aste shikhtisi amra, life er onek harsh realities o face krbo shamne, but I believe jotodin tmi ar ami ekshathe asi, amader majhe love, trust r loyalty ase, duniya ultai geleo amra shobkichu ekshathe face krte prboo
+
+Ami majhe moddhe vabi, ekta meye amk eto kmne love krte pare, etobar promise vangsi, mittha bolsi, khrp treat krsi, stupid er moto kaj krsii but still shob maf kre diye ekhno kmnee amake etooo valobashe, etota care kore amar. I truly believe you are a godsend, You are my true soulmate, Thanks for loving me more than anythinggg
+
+I hope je tmr ei surprise ta valo lagbe, 6 bochor hoiye gese amader rltn er but still tmr jnno special kichu krte prinai tmr birthday te, and i am sorry for that, amke maf kre diyo
 
 Thank you for being you — for the little things you do, the moments we share, and the way you have become such a special part of my world. You deserve to feel loved, appreciated, safe, and celebrated, not just on your birthday, but on the most ordinary days too.
 
-If today gets busy and the wishes come rushing in, I hope you pause for a moment and remember this: someone is cheering for you, choosing you, and wishing the very best for you with his whole heart.
 
 Happy birthday, Bubu. Keep that beautiful heart of yours. I hope I get to make many more memories with you. ♡</div>
         <div class="signature">Always cheering for you, ♡</div>
       </article>
-      <p class="small-note">You can edit this letter in <code>index.html</code> before publishing to make it sound more like you.</p>
+      <p class="small-note">Niche aro jinish achee dekhoo.</p>
     </section>
 
     <section class="section wrap reveal">
       <h2 class="section-title">Little things I love about you</h2>
       <p class="section-sub">A few reasons, out of a million. ♡</p>
       <div class="reasons">
-        <article class="reason" style="--tilt:-1deg"><div class="num">01 · YOUR HEART</div><p>The kindness and care you show in your own little ways.</p></article>
-        <article class="reason" style="--tilt:1deg"><div class="num">02 · YOUR SMILE</div><p>The way your smile can make a difficult day feel lighter.</p></article>
-        <article class="reason" style="--tilt:1deg"><div class="num">03 · THE LITTLE THINGS</div><p>Our small conversations, silly moments, and memories that mean more than they seem.</p></article>
+        <article class="reason" style="--tilt:-1deg"><div class="num">01 · YOUR HEART</div><p>The kindness , loyalty in your heart and care you show in your ways.</p></article>
+        <article class="reason" style="--tilt:1deg"><div class="num">02 · YOUR SMILE</div><p>The way you smile can make my difficult day feel lighter.</p></article>
+        <article class="reason" style="--tilt:1deg"><div class="num">03 · THE LITTLE THINGS</div><p>Our small conversations, silly moments,your vute reactions and memories that mean more than they seem.</p></article>
         <article class="reason" style="--tilt:-1deg"><div class="num">04 · JUST YOU</div><p>You don't have to be perfect or do anything extraordinary to be special to me. Being you is enough.</p></article>
       </div>
-      <p class="small-note">Personalize these four cards with real details, favourite memories, or inside jokes.</p>
+      <p class="small-note">You are the best.</p>
     </section>
 
     <section class="section wrap reveal">
       <h2 class="section-title">A little tune for you</h2>
       <p class="section-sub">Press play. I made this page a tiny melody of its own. ♫</p>
-      <div class="music-card">
-        <div class="disc" id="disc"></div>
-        <p class="music-note">A little birthday melody ♡</p>
-        <p class="music-desc">An original, gentle melody made by this page — no extra audio file needed.</p>
-        <button class="music-btn" id="musicBtn">▶ Play our little tune</button>
-      </div>
+      
+<div class="music-card">
+  <div class="disc"></div>
+  <p class="music-note">A song for my Bubu ♡</p>
+  <p class="music-desc">
+    Press play, Bubu. This one's for you.
+  </p>
+
+  <audio controls preload="metadata"
+    style="width:100%; margin-top:20px;">
+    <source src="bubu-song.mp3" type="audio/mpeg">
+    Your browser does not support audio playback.
+  </audio>
+</div>
+
     </section>
 
     <section class="section wrap reveal">
@@ -185,47 +201,7 @@ Happy birthday, Bubu. Keep that beautiful heart of yours. I hope I get to make m
     entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});
   },{threshold:.12});
   document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-
-  // Original synthesized melody using Web Audio; no copyrighted song or external file.
-  let audioCtx=null, melodyTimer=null, noteIndex=0, playing=false, master=null;
-  const notes=[523.25,659.25,783.99,659.25,587.33,698.46,880,698.46,523.25,587.33,659.25,523.25,392,523.25,659.25,587.33];
-  const musicBtn=document.getElementById('musicBtn'), disc=document.getElementById('disc');
-  function playNote(freq, when, duration){
-    const osc=audioCtx.createOscillator(), gain=audioCtx.createGain();
-    osc.type='sine'; osc.frequency.value=freq;
-    gain.gain.setValueAtTime(0.0001,when);
-    gain.gain.exponentialRampToValueAtTime(0.12,when+0.035);
-    gain.gain.exponentialRampToValueAtTime(0.0001,when+duration);
-    osc.connect(gain);gain.connect(master);osc.start(when);osc.stop(when+duration+0.03);
-  }
-  function scheduleMelody(){
-    if(!playing)return;
-    const now=audioCtx.currentTime;
-    for(let i=0;i<4;i++){
-      const idx=noteIndex%notes.length;
-      playNote(notes[idx],now+i*.34,.29);
-      if(idx%4===0)playNote(notes[idx]/2,now+i*.34,.42);
-      noteIndex++;
-    }
-    melodyTimer=setTimeout(scheduleMelody,1360);
-  }
-  async function toggleMusic(){
-    if(!audioCtx){audioCtx=new (window.AudioContext||window.webkitAudioContext)();master=audioCtx.createGain();master.gain.value=.45;master.connect(audioCtx.destination)}
-    if(audioCtx.state==='suspended')await audioCtx.resume();
-    playing=!playing;
-    if(playing){
-      musicBtn.textContent='Ⅱ Pause the tune';
-      disc.classList.add('playing');
-      scheduleMelody();
-    }else{
-      clearTimeout(melodyTimer);
-      master.gain.setTargetAtTime(0,audioCtx.currentTime,.04);
-      setTimeout(()=>{if(!playing)master.gain.setTargetAtTime(.45,audioCtx.currentTime,.08)},150);
-      musicBtn.textContent='▶ Play our little tune';
-      disc.classList.remove('playing');
-    }
-  }
-  musicBtn.addEventListener('click',toggleMusic);
+  // Play the song from an external MP3 file.
   document.getElementById('finalBtn').addEventListener('click',()=>{
     const r=document.getElementById('finalReveal');
     r.hidden=!r.hidden;
